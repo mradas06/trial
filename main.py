@@ -11,15 +11,6 @@ class hmp4040():
         print(deviceName)
         return deviceName
 
-    def on(self):  # turn ON power supply
-        self.hmp4040.write(':OUTPut:STATe %d' % 1)
-        return "power supply is ON"
-
-    def off(self):  # turn OFF power supply
-        self.hmp4040.write(':OUTPut:STATe %d' % 0)
-        return "power supply is OFF"
-
-
     def setVoltage(self, voltage, channel):
         return self.write(b"INST OUT" + str(channel).encode() + b"\nVOLT " + str(voltage).encode() + b"\n")
 
