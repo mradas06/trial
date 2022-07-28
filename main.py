@@ -1,9 +1,16 @@
 import pyvisa
+
+
 class hmp4040():
 
     def __init__(self, pyvisa_instr):
         self.hmp4040 = pyvisa_instr
 
+    def write(str):
+        return self.resource.write(str)
+
+    def read(str):
+        return self.resource.read(str)  
 
     def readDeviceName(self):
         self.write(b"IDN?\n")
@@ -46,6 +53,6 @@ class hmp4040():
         print("channel turned off")
         return
 
-    exit()
     
+   
 
