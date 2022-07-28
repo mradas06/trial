@@ -2,12 +2,13 @@
 import pyvisa
 
 
-def readDeviceName(self):
-    self.write(b"IDN?\n")
-    deviceName = self.read()
-    print(deviceName)
-    return deviceName
 class hmp4040():
+    
+    def readDeviceName(self):
+        self.write(b"IDN?\n")
+        deviceName = self.read()
+        print(deviceName)
+        return deviceName
 
     def __init__(self,resource) -> None:
         self.resource = resource
@@ -55,5 +56,5 @@ class hmp4040():
         return
 
     
-   
+
 
