@@ -14,10 +14,10 @@ class hmp4040():
         self.resource = resource
         pass
 
-    def write(self):
+    def write(self, str):
         return self.resource.write(str)
 
-    def read(self):
+    def read(self, str):
         return self.resource.read(str)
 
     def setVoltage(self, voltage, channel):
@@ -56,5 +56,8 @@ class hmp4040():
         return
 
     
+
+
+
 
 
