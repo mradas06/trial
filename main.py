@@ -2,7 +2,7 @@
 import pyvisa
 
 
-class hmp4040():
+class Hmp4040():
     
     def readDeviceName(self):
         self.write(b"IDN?\n")
