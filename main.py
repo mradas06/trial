@@ -1,11 +1,11 @@
-import pyvisa 
+
 from time import sleep
 class HMP4040():
     
 
-    def __init__(self,resource: pyvisa.Resource) -> None:
+    def __init__(self,resource) -> None:
         self.resource = resource
-        pass
+        
 
     def readDeviceName(self):
         self.resource.write(b"IDN?\n")
@@ -67,6 +67,7 @@ class HMP4040():
         self.resource.write(b"INST OUT" + str(channel).encode() + b"\nOUTP OFF\n")   #channel off#
         print("channel turned off")
         return
+    
     
     
 
